@@ -8,7 +8,7 @@
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
   background: #f9f9f9;
   color: #444;
 
@@ -26,24 +26,28 @@ body {
   transform: translateY(-70px);
 }
 
+/* === ВЕРХНИЙ БЛОК === */
+.top {
+  margin-bottom: 25px;
+}
+
 .icon {
   width: 100px;
-  margin-top: 10px;
+  margin-bottom: 10px;
   opacity: 0;
   animation: fadeIn 1s forwards;
 }
 
 h1 {
   font-size: 2em;
-  margin: 15px 0 5px;
+  margin: 10px 0 6px;
   opacity: 0;
   animation: fadeIn 1s forwards;
   animation-delay: 0.3s;
 }
 
-/* точки */
 .dots {
-  margin: 8px 0 16px;
+  margin-top: 6px;
 }
 .dots span {
   display: inline-block;
@@ -57,11 +61,16 @@ h1 {
 .dots span:nth-child(2){ animation-delay: .2s }
 .dots span:nth-child(3){ animation-delay: .4s }
 
-/* инструкция */
+/* === НИЖНИЙ БЛОК === */
+.content {
+  margin-top: 10px;
+}
+
+/* инструкция (мягкая) */
 .instruction {
-  font-size: 1.1em;
+  font-size: 1.05em;
   line-height: 1.55;
-  color: #555;
+  color: #777;
   margin-bottom: 18px;
 
   opacity: 0;
@@ -69,26 +78,30 @@ h1 {
   animation-delay: 0.5s;
 }
 
-/* основной текст */
-p {
+/* основной текст (акцент) */
+.main-text {
   font-size: 1.2em;
   line-height: 1.5;
-  margin: 10px 0;
+  color: #444;
+  margin-bottom: 10px;
+
   opacity: 0;
   animation: fadeIn 1s forwards;
   animation-delay: 0.7s;
 }
 
+/* кнопка */
 a.button {
   display: inline-block;
   padding: 12px 22px;
-  margin-top: 20px;
+  margin-top: 18px;
   font-size: 1.2em;
   color: #fff;
   background: #7360f2;
   border-radius: 8px;
   text-decoration: none;
   transition: all 0.3s ease;
+
   opacity: 0;
   animation: fadeIn 1s forwards;
   animation-delay: 1s;
@@ -99,6 +112,7 @@ a.button:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,.2);
 }
 
+/* анимации */
 @keyframes bounce {
   from {transform:translateY(0);opacity:.5}
   to {transform:translateY(-10px);opacity:1}
@@ -108,10 +122,11 @@ a.button:hover {
   to {opacity:1}
 }
 
+/* адаптив */
 @media(max-width: 480px){
   h1 { font-size: 1.8em; }
-  p { font-size: 1.1em; }
-  .instruction { font-size: 1em; }
+  .main-text { font-size: 1.1em; }
+  .instruction { font-size: 0.95em; }
   a.button { font-size: 1em; padding: 10px 20px; }
   .icon { width: 80px; }
 }
@@ -122,23 +137,31 @@ a.button:hover {
 
 <div class="wrapper">
 
-<img src="https://www.vectorlogo.zone/logos/viber/viber-tile.svg" class="icon">
+<!-- верх -->
+<div class="top">
+  <img src="https://www.vectorlogo.zone/logos/viber/viber-tile.svg" class="icon">
 
-<h1>Відкриваємо Viber</h1>
+  <h1>Відкриваємо Viber</h1>
 
-<div class="dots"><span></span><span></span><span></span></div>
-
-<div class="instruction">
-Для переходу натисніть на <strong>···</strong> у правому верхньому куті екрана, а потім оберіть <strong>«Відкрити в браузері»</strong>.
+  <div class="dots"><span></span><span></span><span></span></div>
 </div>
 
-<p>
-Далі натисніть кнопку нижче, щоб перейти у Viber та зв'язатися з нами.
-</p>
+<!-- низ -->
+<div class="content">
 
-<a class="button" href="viber://chat?number=%2B380957765663">
-Написати в Viber
-</a>
+  <div class="instruction">
+    Для переходу натисніть на <strong>···</strong> у правому верхньому куті екрана, а потім оберіть <strong>«Відкрити в браузері»</strong>.
+  </div>
+
+  <div class="main-text">
+    Далі натисніть кнопку нижче, щоб перейти у Viber та зв'язатися з нами.
+  </div>
+
+  <a class="button" href="viber://chat?number=%2B380957765663">
+    Написати в Viber
+  </a>
+
+</div>
 
 </div>
 
