@@ -1,4 +1,110 @@
-...
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Izuminka Style</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 30px 15px;
+  background: #f9f9f9;
+  color: #444;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Заголовок */
+h1 {
+  font-size: 2em;
+  margin: 15px 0;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.3s;
+}
+
+/* Текст */
+p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  max-width: 90%;
+  margin: 8px auto;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.6s;
+}
+
+/* Кнопка */
+a.button {
+  display: inline-block;
+  padding: 12px 22px;
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #fff;
+  background: #229ED9;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+}
+a.button:hover {
+  background: #1a89bd;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,.2);
+}
+
+/* Логотип */
+.icon {
+  width: 100px;
+  margin-top: 30px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+/* Точки загрузки */
+.dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background: #229ED9;
+  border-radius: 50%;
+  animation: bounce 1s infinite alternate;
+}
+.dots span:nth-child(2){ animation-delay: .2s }
+.dots span:nth-child(3){ animation-delay: .4s }
+
+@keyframes bounce {
+  from {transform:translateY(0);opacity:.5}
+  to {transform:translateY(-12px);opacity:1}
+}
+
+@keyframes fadeIn {
+  to {opacity:1}
+}
+
+/* Адаптив */
+@media(max-width: 480px){
+  h1 { font-size: 1.8em; }
+  p { font-size: 1.1em; }
+  a.button { font-size: 1em; padding: 10px 20px; }
+  .icon { width: 80px; }
+}
+</style>
+</head>
+
+<body>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" class="icon">
+
+<h1>Відкриваємо Telegram</h1>
+
+<div class="dots"><span></span><span></span><span></span></div>
+
 <p>
 Натисніть кнопку нижче, щоб перейти в наш Telegram та переглянути актуальні&nbsp;новинки.
 </p>
@@ -12,4 +118,6 @@
 <br>
 https://t.me/+w6bnHtW-4xc4OWJi
 </p>
-...
+
+</body>
+</html>
