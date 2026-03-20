@@ -25,7 +25,7 @@ body {
   width: 100%;
   padding: 20px;
 
-  transform: translateY(-70px); /* подняли выше */
+  transform: translateY(-70px);
 }
 
 /* Заголовок */
@@ -35,6 +35,17 @@ h1 {
   opacity: 0;
   animation: fadeIn 1s forwards;
   animation-delay: 0.3s;
+}
+
+/* Инструкция */
+.instruction {
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: #555;
+  margin: 10px 0 20px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.5s;
 }
 
 /* Текст */
@@ -104,7 +115,7 @@ a.button:hover {
 /* Адаптив */
 @media(max-width: 480px){
   h1 { font-size: 1.8em; }
-  p { font-size: 1.1em; }
+  p, .instruction { font-size: 1.1em; }
   a.button { font-size: 1em; padding: 10px 20px; }
   .icon { width: 80px; }
 }
@@ -119,10 +130,15 @@ a.button:hover {
 
 <h1>Відкриваємо Viber</h1>
 
+<div class="instruction">
+Для переходу натисніть на <strong>···</strong> у правому верхньому куті екрана, а потім оберіть<br>
+<strong>«Відкрити в браузері»</strong>
+</div>
+
 <div class="dots"><span></span><span></span><span></span></div>
 
 <p>
-Натисніть кнопку нижче, щоб перейти у Viber та зв'язатися з нами.
+Далі натисніть кнопку нижче, щоб перейти у Viber та зв'язатися з нами.
 </p>
 
 <a class="button" href="viber://chat?number=%2B380957765663">
